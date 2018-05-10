@@ -1,5 +1,5 @@
 # gnome-hide-dash
-Tiny Gnome extension for dash hiding
+Tiny Gnome extension for dash panel hiding
 
 Derivative of `Removal Dash` extension with major bugfix.
 
