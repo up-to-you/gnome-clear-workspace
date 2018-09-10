@@ -4,6 +4,12 @@ const Main = imports.ui.main;
 function init() {
 	Main.layoutManager.connect('startup-complete', Lang.bind(this, function () { 
 			Main.overview._dash.actor.hide();
+		
+			Main.overview._controls._thumbnailsBox.actor.destroy_all_children();
+			Main.overview._controls._thumbnailsBox.actor.destroy();
+
+			Main.overview._controls._thumbnailsSlider.actor.destroy_all_children();
+			Main.overview._controls._thumbnailsSlider.actor.destroy();
 		})
 	);
 }
