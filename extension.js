@@ -9,9 +9,13 @@ function init() {
 }
 
 function enable() {
-	Main.overview._dash.hide();
+	if (Main.overview._dash.hide) {
+		Main.overview._dash.hide();
+	}
 }
 
 function disable() {
-	Main.overview._dash.show();
+	if (Main.overview._dash.show) {
+		Main.overview._dash.show();
+	}
 }
