@@ -1,6 +1,6 @@
 {
-  "description": "Hide dash, with hotkey-apps preservation.", 
-  "name": "Hide Dash", 
+  "description": "Hide dash from left side and, with retaining apps access by hotkeys. Hide top panel, except overview mode.", 
+  "name": "Gnome Clear Workspace", 
   "shell-version": [
     "3.10", 
     "3.12", 
@@ -12,9 +12,11 @@
     "3.24", 
     "3.26", 
     "3.28", 
-    "3.30"
+    "3.30",
+    "3.34",
+    "3.36"
   ],
   "url": "", 
-  "uuid": "Hide_Dash@localhost.domain", 
+  "uuid": "gnome-clear-workspace@localhost.domain", 
   "version": 1
 }
