@@ -42,15 +42,15 @@ function _setTopPanelHiddenPosition() {
 
 function _setTopPanelInitialPosition() {
 	PanelBox.set_position(0, PANEL_Y_POS);
-    PanelBox.actor.translation_y = 0;
+    PanelBox.translation_y = 0;
 }
 
 function _hideTopPanel() {
-    Tweener.addTween(PanelBox.actor, { translation_y: 0, time: PANEL_ANIM_TIME });
+    Tweener.addTween(PanelBox, { translation_y: 0, time: PANEL_ANIM_TIME });
 }
 
 function _showTopPanel() {
-    Tweener.addTween(PanelBox.actor, { translation_y: PANEL_HEIGHT, time: PANEL_ANIM_TIME });
+    Tweener.addTween(PanelBox, { translation_y: PANEL_HEIGHT, time: PANEL_ANIM_TIME });
 }
 
 function _connectOverviewEvents() {
