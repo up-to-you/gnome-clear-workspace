@@ -23,7 +23,6 @@ function enable() {
 
 	_connectOverviewEvents();
 	_setTopPanelHiddenPosition();
-	_hideTopPanel();
 }
 
 function disable() {
@@ -33,7 +32,6 @@ function disable() {
 
 	_disconnectOverviewEvents();
 	_setTopPanelInitialPosition();
-	_showTopPanel();
 }
 
 function _setTopPanelHiddenPosition() {
@@ -42,15 +40,14 @@ function _setTopPanelHiddenPosition() {
 
 function _setTopPanelInitialPosition() {
 	PanelBox.set_position(0, PANEL_Y_POS);
-    PanelBox.translation_y = 0;
 }
 
 function _hideTopPanel() {
-    Tweener.addTween(PanelBox, { translation_y: 0, time: PANEL_ANIM_TIME });
+	Tweener.addTween(PanelBox, { translation_y: 0, time: PANEL_ANIM_TIME });
 }
 
 function _showTopPanel() {
-    Tweener.addTween(PanelBox, { translation_y: PANEL_HEIGHT, time: PANEL_ANIM_TIME });
+	Tweener.addTween(PanelBox, { translation_y: PANEL_HEIGHT, time: PANEL_ANIM_TIME });
 }
 
 function _connectOverviewEvents() {
