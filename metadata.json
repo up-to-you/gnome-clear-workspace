@@ -1,5 +1,5 @@
 {
-  "description": "Hide dash from left side and, with retaining apps access by hotkeys. Hide top panel, except overview mode.", 
+  "description": "Hide dash from left side, with retaining apps access by hotkeys. Hide top panel, except overview mode.", 
   "name": "Gnome Clear Workspace", 
   "shell-version": [
     "3.10", 
