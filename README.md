@@ -1,4 +1,3 @@
-# gnome-hide-dash
 Hide dash from left side, with retaining apps access by hotkeys. Hide top panel, except overview mode.
 
 ```bash
