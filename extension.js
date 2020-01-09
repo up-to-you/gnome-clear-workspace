@@ -6,6 +6,7 @@ const PanelBox = Main.layoutManager.panelBox;
 const PANEL_ANIM_TIME = 0.0;
 const PANEL_Y_POS = PanelBox.get_y();
 const PANEL_HEIGHT = PanelBox.get_height();
+const PANEL_POS_HIDE_OFFSET = 1;
 
 let connectedShowEvent, connectedHideEvent;
 
@@ -35,7 +36,7 @@ function disable() {
 }
 
 function _setTopPanelHiddenPosition() {
-	PanelBox.set_position(0, PANEL_Y_POS - PANEL_HEIGHT);
+	PanelBox.set_position(0, (PANEL_Y_POS - PANEL_HEIGHT) + PANEL_POS_HIDE_OFFSET);
 }
 
 function _setTopPanelInitialPosition() {
