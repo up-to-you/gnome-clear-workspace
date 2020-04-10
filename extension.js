@@ -11,10 +11,9 @@ const PANEL_POS_HIDE_OFFSET = 1;
 let connectedShowEvent, connectedHideEvent;
 
 function init() {
-	Main.layoutManager.connect('startup-complete', Lang.bind(this, function () { 
-			Main.overview.dash.hide();
-		})
-	);
+	_runOnStartup(function () { 
+		Main.overview.dash.hide();
+	});
 }
 
 function enable() {
@@ -22,8 +21,8 @@ function enable() {
 		Main.overview.dash.hide();
 	}
 
+	_runOnStartup(_setTopPanelHiddenPosition);
 	_connectOverviewEvents();
-	_setTopPanelHiddenPosition();
 }
 
 function disable() {
@@ -63,4 +62,9 @@ function _disconnectOverviewEvents() {
 	if(connectedHideEvent) {
 		Main.overview.disconnect(connectedHideEvent);		
 	}
+}
+
+function _runOnStartup(startupFunc) {
+	Main.layoutManager.connect('startup-complete', Lang.bind(this, startupFunc)
+	);
 }
