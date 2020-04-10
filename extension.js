@@ -12,14 +12,14 @@ let connectedShowEvent, connectedHideEvent;
 
 function init() {
 	Main.layoutManager.connect('startup-complete', Lang.bind(this, function () { 
-			Main.overview._dash.hide();
+			Main.overview.dash.hide();
 		})
 	);
 }
 
 function enable() {
-	if (Main.overview._dash.hide) {
-		Main.overview._dash.hide();
+	if (Main.overview.dash.hide) {
+		Main.overview.dash.hide();
 	}
 
 	_connectOverviewEvents();
@@ -27,8 +27,8 @@ function enable() {
 }
 
 function disable() {
-	if (Main.overview._dash.show) {
-		Main.overview._dash.show();
+	if (Main.overview.dash.show) {
+		Main.overview.dash.show();
 	}
 
 	_disconnectOverviewEvents();
